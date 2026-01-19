@@ -1344,15 +1344,25 @@ img {
 /* ============================================
    PARALLAX & SCROLL ANIMATIONS
    ============================================ */
-/* Enhanced scroll reveal with different directions */
-/* Content visible by default - JS adds .js-loaded to html element */
-.reveal {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+/* DISABLED: Scroll reveal animations causing visibility issues */
+/* All content is now always 100% visible */
+.reveal,
+.reveal-left,
+.reveal-right,
+.reveal-scale,
+.reveal-rotate {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
 }
 
-/* Only hide elements when JS is confirmed loaded */
+/* Keep transition for any future hover effects */
+.reveal {
+  transition: all 0.3s ease;
+}
+
+/* These rules are disabled but kept for reference */
+/*
 html.js-loaded .reveal {
   opacity: 0;
   transform: translateY(60px);
@@ -1362,42 +1372,7 @@ html.js-loaded .reveal.active {
   opacity: 1;
   transform: translateY(0);
 }
-
-/* Slide from left */
-html.js-loaded .reveal-left {
-  transform: translateX(-60px);
-}
-
-html.js-loaded .reveal-left.active {
-  transform: translateX(0);
-}
-
-/* Slide from right */
-html.js-loaded .reveal-right {
-  transform: translateX(60px);
-}
-
-html.js-loaded .reveal-right.active {
-  transform: translateX(0);
-}
-
-/* Scale up */
-html.js-loaded .reveal-scale {
-  transform: scale(0.8);
-}
-
-html.js-loaded .reveal-scale.active {
-  transform: scale(1);
-}
-
-/* Rotate in */
-html.js-loaded .reveal-rotate {
-  transform: rotate(-5deg) translateY(40px);
-}
-
-html.js-loaded .reveal-rotate.active {
-  transform: rotate(0) translateY(0);
-}
+*/
 
 /* Stagger animation for grid items */
 .cards-grid .card:nth-child(1) {
