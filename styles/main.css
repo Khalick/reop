@@ -1439,7 +1439,7 @@ html.js-loaded .reveal.active {
   left: 0;
   right: 0;
   bottom: 0;
-  will-change: transform;
+  /* will-change removed - can cause blurriness */
   pointer-events: none;
 }
 
@@ -1581,26 +1581,14 @@ html.js-loaded .reveal.active {
 }
 
 /* ============================================
-   MOBILE PERFORMANCE OPTIMIZATIONS
+   PERFORMANCE OPTIMIZATIONS
    ============================================ */
 
-/* GPU acceleration for smooth transforms */
-.nav,
-.mobile-menu,
-.card,
-.stat-item,
-.gallery-item,
-.hero-image,
-.hero-decoration,
-.btn,
-.reveal {
-  will-change: transform;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
+/* GPU acceleration REMOVED - it was causing blurriness on desktop displays */
+/* The transform: translateZ(0) and will-change: transform properties */
+/* can cause sub-pixel rendering issues on high-DPI desktop screens */
 
-/* Contain layout thrashing */
+/* Contain layout thrashing - these are safe */
 .section {
   contain: layout style;
 }
