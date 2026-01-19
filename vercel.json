@@ -1,49 +1,4 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "**/*.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "styles/**/*",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "scripts/**/*",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "images/**/*",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.xml",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.txt",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "*.ico",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "status": 404,
-      "dest": "/index.html"
-    }
-  ],
   "headers": [
     {
       "source": "/images/(.*)",
@@ -81,5 +36,7 @@
         }
       ]
     }
-  ]
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }
