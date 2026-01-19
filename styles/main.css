@@ -1367,57 +1367,57 @@ img {
    PARALLAX & SCROLL ANIMATIONS
    ============================================ */
 /* Enhanced scroll reveal with different directions */
+/* Content visible by default - JS adds .js-loaded to html element */
 .reveal {
-  opacity: 0;
+  opacity: 1;
+  transform: translateY(0);
   transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.reveal.active {
-  opacity: 1;
-}
-
-/* Default: slide up */
-.reveal {
+/* Only hide elements when JS is confirmed loaded */
+html.js-loaded .reveal {
+  opacity: 0;
   transform: translateY(60px);
 }
 
-.reveal.active {
+html.js-loaded .reveal.active {
+  opacity: 1;
   transform: translateY(0);
 }
 
 /* Slide from left */
-.reveal-left {
+html.js-loaded .reveal-left {
   transform: translateX(-60px);
 }
 
-.reveal-left.active {
+html.js-loaded .reveal-left.active {
   transform: translateX(0);
 }
 
 /* Slide from right */
-.reveal-right {
+html.js-loaded .reveal-right {
   transform: translateX(60px);
 }
 
-.reveal-right.active {
+html.js-loaded .reveal-right.active {
   transform: translateX(0);
 }
 
 /* Scale up */
-.reveal-scale {
+html.js-loaded .reveal-scale {
   transform: scale(0.8);
 }
 
-.reveal-scale.active {
+html.js-loaded .reveal-scale.active {
   transform: scale(1);
 }
 
 /* Rotate in */
-.reveal-rotate {
+html.js-loaded .reveal-rotate {
   transform: rotate(-5deg) translateY(40px);
 }
 
-.reveal-rotate.active {
+html.js-loaded .reveal-rotate.active {
   transform: rotate(0) translateY(0);
 }
 

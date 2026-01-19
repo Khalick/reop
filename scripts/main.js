@@ -4,6 +4,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Mark that JavaScript is loaded and working
+    document.documentElement.classList.add('js-loaded');
+
     // Initialize all components
     initNavigation();
     initScrollReveal();
