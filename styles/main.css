@@ -450,8 +450,6 @@ img {
 .hero-title {
   font-size: var(--text-4xl);
   margin-bottom: var(--space-6);
-  animation: fadeInUp 0.8s ease 0.2s forwards;
-  opacity: 0;
 }
 
 @media (min-width: 768px) {
@@ -480,8 +478,6 @@ img {
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
-  animation: fadeInUp 0.8s ease 0.4s forwards;
-  opacity: 0;
 }
 
 @media (min-width: 992px) {
@@ -496,8 +492,6 @@ img {
   flex-wrap: wrap;
   gap: var(--space-4);
   justify-content: center;
-  animation: fadeInUp 0.8s ease 0.6s forwards;
-  opacity: 0;
 }
 
 @media (min-width: 992px) {
@@ -510,8 +504,6 @@ img {
   position: relative;
   display: flex;
   justify-content: center;
-  animation: fadeInRight 1s ease 0.4s forwards;
-  opacity: 0;
 }
 
 .hero-image-wrapper {
